@@ -1,0 +1,21 @@
+# Use the official Directus image as the base
+FROM directus/directus:latest
+
+# Set the working directory inside the container
+WORKDIR /directus
+
+# Optional: Enable corepack and prepare pnpm if you need to install extensions
+# USER root
+# RUN corepack enable \
+#  && corepack prepare pnpm@latest --activate \
+#  && chown node:node /directus
+# USER node
+
+# Optional: Install Directus extensions (uncomment and modify as needed)
+# RUN pnpm install @directus-labs/spreadsheet-layout
+
+# Expose the default Directus port
+EXPOSE 8055
+
+# Command to start Directus (this is usually handled by the base image)
+# CMD ["node", "/directus/cli.js", "bootstrap", "&&", "node", "/directus/cli.js", "start"]
