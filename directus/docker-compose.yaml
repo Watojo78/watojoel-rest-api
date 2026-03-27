@@ -22,6 +22,7 @@ services:
         condition: service_healthy
     environment:
       SECRET: ${DIRECTUS_SECRET}
+      KEY: ${DIRECTUS_KEY}
 
       DB_CLIENT: ${DB_CLIENT}
       DB_HOST: ${DB_HOST}
