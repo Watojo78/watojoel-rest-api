@@ -1,5 +1,5 @@
 # Use the official Directus image as the base
-FROM directus/directus:latest
+FROM directus/directus:11.17.3
 
 # Set the working directory inside the container
 WORKDIR /directus
